@@ -16,7 +16,7 @@ module BacklogKit
       end
 
       def json?
-        !!content_type.match(/application\/json/)
+        !!content_type.include?('application/json')
       end
 
       def content_type

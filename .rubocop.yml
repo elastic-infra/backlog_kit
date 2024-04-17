@@ -1,12 +1,18 @@
+require:
+  - rubocop-packaging
+  - rubocop-performance
+
 inherit_from: .rubocop_todo.yml
 
 AllCops:
   DisplayCopNames: true
+  NewCops: enable
+  SuggestExtensions: false
 
 Bundler/DuplicatedGem:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: false
 
 Layout/MultilineMethodCallIndentation:
@@ -23,9 +29,6 @@ Metrics/ModuleLength:
   Enabled: false
 
 Naming/AccessorMethodName:
-  Enabled: false
-
-Style/BracesAroundHashParameters:
   Enabled: false
 
 Style/DoubleNegation:
@@ -50,5 +53,19 @@ Style/RedundantSelf:
 Style/RegexpLiteral:
   Enabled: false
 
-Style/UnneededPercentQ:
+Style/RedundantPercentQ:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/FetchEnvVar:
+  Enabled: false
+
+Naming/VariableNumber:
+  Exclude:
+    - 'spec/backlog_kit/client_spec.rb'
+    - 'spec/backlog_kit/hash_extensions_spec.rb'
+
+Gemspec/RequireMFA:
   Enabled: false
