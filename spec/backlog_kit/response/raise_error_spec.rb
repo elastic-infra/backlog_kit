@@ -20,7 +20,7 @@ describe BacklogKit::Response::RaiseError do
   end
 
   describe '#on_complete' do
-    subject { -> { response.on_complete(faraday_env_mock) } }
+    subject { response.on_complete(faraday_env_mock) }
 
     context 'when error code contains 1' do
       let(:error_code) { 1 }
@@ -79,27 +79,27 @@ describe BacklogKit::Response::RaiseError do
 
     context 'when error code contains unexpected code' do
       let(:error_code) { 99 }
-      it { is_expected.to raise_error(BacklogKit::Error, "[ERROR 1] UnexpectedError - エラー1 (CODE: #{error_code}), [ERROR 2] UnexpectedError - エラー2 (CODE: #{error_code})") }
+      it { expect { subject }.to raise_error(BacklogKit::Error, "[ERROR 1] UnexpectedError - エラー1 (CODE: #{error_code}), [ERROR 2] UnexpectedError - エラー2 (CODE: #{error_code})") }
     end
 
     context 'when status code is 204' do
       let(:faraday_env_status) { 204 }
-      it { is_expected.not_to raise_error }
+      it { expect { subject }.not_to raise_error }
     end
 
     context 'when content type is not json' do
       let(:faraday_env_headers) { { 'content-type' => 'image/gif' } }
-      it { is_expected.not_to raise_error }
+      it { expect { subject }.not_to raise_error }
     end
 
     context 'when json body is array' do
       let(:faraday_env_body) { [{ 'key1' => 'value1' }].to_json }
-      it { is_expected.not_to raise_error }
+      it { expect { subject }.not_to raise_error }
     end
 
     context 'when json body does not contains error' do
       let(:faraday_env_body) { { 'key1' => 'value1' }.to_json }
-      it { is_expected.not_to raise_error }
+      it { expect { subject }.not_to raise_error }
     end
   end
 
