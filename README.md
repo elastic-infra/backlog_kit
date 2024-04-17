@@ -1,13 +1,8 @@
 # BacklogKit
 
-[![Gem Version](https://badge.fury.io/rb/backlog_kit.svg)](https://badge.fury.io/rb/backlog_kit)
-[![Build Status](https://github.com/emsk/backlog_kit/actions/workflows/build.yml/badge.svg)](https://github.com/emsk/backlog_kit/actions/workflows/build.yml)
-[![Build Status](https://travis-ci.org/emsk/backlog_kit.svg?branch=main)](https://travis-ci.org/emsk/backlog_kit)
-[![Build status](https://ci.appveyor.com/api/projects/status/no4jqaoimctfsejj?svg=true)](https://ci.appveyor.com/project/emsk/backlog-kit)
-[![Build Status](https://dev.azure.com/emsk/backlog_kit/_apis/build/status/emsk.backlog_kit?branchName=main)](https://dev.azure.com/emsk/backlog_kit/_build/latest?definitionId=1&branchName=main)
-[![Codecov](https://codecov.io/gh/emsk/backlog_kit/branch/main/graph/badge.svg)](https://codecov.io/gh/emsk/backlog_kit)
-[![Code Climate](https://codeclimate.com/github/emsk/backlog_kit/badges/gpa.svg)](https://codeclimate.com/github/emsk/backlog_kit)
-[![Inline docs](https://inch-ci.org/github/emsk/backlog_kit.svg?branch=main)](https://inch-ci.org/github/emsk/backlog_kit)
+[![Build Status](https://github.com/elastic-infra/backlog_kit/actions/workflows/build.yml/badge.svg)](https://github.com/elastic-infra/backlog_kit/actions/workflows/build.yml)
+[![Codecov](https://codecov.io/gh/elastic-infra/backlog_kit/branch/main/graph/badge.svg)](https://codecov.io/gh/elastic-infra/backlog_kit)
+[![Code Climate](https://codeclimate.com/github/elastic-infra/backlog_kit/badges/gpa.svg)](https://codeclimate.com/github/elastic-infra/backlog_kit)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Ruby wrapper for the Nulab's Backlog API.
@@ -36,7 +31,7 @@ Or install it yourself as:
 require 'backlog_kit'
 
 client = BacklogKit::Client.new(
-  space_id: 'emsk',
+  space_id: 'elastic-infra',
   api_key: '1234567890abcdefghij1234567890abcdefghij1234567890abcdefghij1234'
 )
 
@@ -67,7 +62,7 @@ client.delete('groups/3712') # DELETE
 
 ```ruby
 client = BacklogKit::Client.new(
-  space_id: 'emsk',
+  space_id: 'elastic-infra',
   api_key: '1234567890abcdefghij1234567890abcdefghij1234567890abcdefghij1234'
 )
 ```
@@ -76,7 +71,7 @@ client = BacklogKit::Client.new(
 
 ```ruby
 client = BacklogKit::Client.new(
-  space_id: 'emsk',
+  space_id: 'elastic-infra',
   api_key: nil, # api_key should be nil
   access_token: 'abcdefghij1234567890abcdefghij1234567890abcdefghij1234567890abcd'
 )
@@ -119,7 +114,7 @@ BacklogKit's API documentation is [here](https://www.rubydoc.info/gems/backlog_k
 
 ## Contributing
 
-1. Fork it ( https://github.com/emsk/backlog_kit/fork )
+1. Fork it ( https://github.com/elastic-infra/backlog_kit/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
