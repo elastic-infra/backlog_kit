@@ -1,6 +1,6 @@
 module BacklogKit
   class Response
-    class Middleware < Faraday::Response::Middleware
+    class Middleware < Faraday::Middleware
       attr_reader(:headers, :status, :body)
 
       def on_complete(env)
