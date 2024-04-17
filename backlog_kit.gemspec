@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.7'
 
   spec.add_runtime_dependency 'activesupport', '>= 4.2.7.1'
+  spec.add_runtime_dependency 'addressable', '~> 2.7'
   spec.add_runtime_dependency 'faraday', '~> 2.0'
   spec.add_runtime_dependency 'faraday-multipart', '~> 1.0'
-  spec.add_runtime_dependency 'addressable', '~> 2.7'
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'multi_json', '~> 1.13'
   spec.add_development_dependency 'rake', '~> 13.0'
