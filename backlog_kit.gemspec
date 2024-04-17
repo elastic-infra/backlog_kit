@@ -5,12 +5,11 @@ require 'backlog_kit/version'
 Gem::Specification.new do |spec|
   spec.name          = 'backlog_kit'
   spec.version       = BacklogKit::VERSION
-  spec.authors       = ['emsk']
-  spec.email         = ['emsk1987@gmail.com']
+  spec.authors       = ['Elastic Infra']
 
   spec.summary       = %q{Wrapper for the Backlog API v2.}
   spec.description   = %q{Client library for the Nulab's Backlog API version 2 written in Ruby.}
-  spec.homepage      = 'https://github.com/emsk/backlog_kit'
+  spec.homepage      = 'https://github.com/elastic-infra/backlog_kit'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
